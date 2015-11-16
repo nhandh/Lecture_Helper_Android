@@ -1,0 +1,84 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.example.nhdo.lecturehelper.DisplayCourse">
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/DisplayCourse_editText_course_name"
+        android:hint="course name"
+        android:layout_below="@+id/DisplayCourse_tv_course_name"
+        android:layout_alignLeft="@+id/DisplayCourse_tv_course_name"
+        android:layout_alignStart="@+id/DisplayCourse_tv_course_name" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Course name:"
+        android:id="@+id/DisplayCourse_tv_course_name"
+        android:layout_marginLeft="26dp"
+        android:layout_marginStart="26dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="38dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Start Time - End Time:"
+        android:id="@+id/DisplayCourse_textView_start_end"
+        android:layout_below="@+id/DisplayCourse_editText_course_name"
+        android:layout_alignLeft="@+id/DisplayCourse_editText_course_name"
+        android:layout_alignStart="@+id/DisplayCourse_editText_course_name" />
+
+    <TimePicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/DisplayCourse_timePickerStart"
+        android:layout_below="@+id/DisplayCourse_textView_start_end"
+        android:layout_alignParentLeft="true" />
+
+
+    <TimePicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/DisplayCourse_timePickerEnd"
+        android:layout_below="@+id/DisplayCourse_textView_start_end"
+        android:layout_toRightOf="@+id/DisplayCourse_timePickerStart"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_below="@+id/DisplayCourse_timePickerStart"
+        android:id="@+id/DisplayCourse_tv_day_of_weeks"
+        android:text="Days of week: "/>
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="26dp"
+        android:layout_below="@+id/DisplayCourse_tv_day_of_weeks"
+        android:id="@+id/DisplayCourse_daysOfWeek">
+
+    </ListView>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save this course"
+        android:id="@+id/DisplayCourse_btn_add_course"
+        android:onClick="run"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>
+
