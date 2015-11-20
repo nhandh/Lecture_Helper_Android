@@ -16,6 +16,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
+    <Button android:id="@+id/main_btn_addPhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Photo"
+        android:onClick="addPhoto"
+        />
+
+    <Button android:id="@+id/main_btn_addVideo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Video"
+        android:onClick="addVideo"
+        />
+
     <Button android:id="@+id/main_btn_addAudio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
