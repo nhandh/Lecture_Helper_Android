@@ -6,8 +6,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class AddNoteActivity extends AppCompatActivity {
 
@@ -45,7 +49,21 @@ public class AddNoteActivity extends AppCompatActivity {
     }
 
     public void saveNote(View view){
-        //File output_file = LectureHelperUtils.getEmptyFileWithStructuredPath();
+        File output_file = LectureHelperUtils.getEmptyFileWithStructuredPath
+                (MainActivity.current_course_name, TEXT_FILE_FORMAT);
+
+        try {
+            BufferedWriter buf = new BufferedWriter(new FileWriter(output_file, true));
+            buf.append(note.getText().toString());
+            buf.newLine();
+            buf.close();
+            note.setText("");
+            Toast.makeText(this, "Note saved", Toast.LENGTH_LONG).show();
+        } catch (IOException e) {
+            Toast.makeText(this, "Exception: " + e.toString(), Toast.LENGTH_LONG).show();
+        }
+
+
 
 
 
