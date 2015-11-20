@@ -4,13 +4,22 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
+
+import java.io.File;
 
 public class AddNoteActivity extends AppCompatActivity {
+
+    private static final String TEXT_FILE_FORMAT = ".txt";
+    EditText note;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_note);
+
+        note = (EditText) findViewById(R.id.addNote_text);
     }
 
     @Override
@@ -33,5 +42,12 @@ public class AddNoteActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void saveNote(View view){
+        //File output_file = LectureHelperUtils.getEmptyFileWithStructuredPath();
+
+
+
     }
 }

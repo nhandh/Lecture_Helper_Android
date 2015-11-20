@@ -12,7 +12,7 @@ import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
 
-    String current_course_name;
+    public static String current_course_name;
     CourseTime  current_time;
     int current_day_of_week;
     TextView textView;
@@ -51,7 +51,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void addNote(View view) {
-        Log.d("MainActivity", " add text selected!");
+        Intent intent = new Intent(this, AddNoteActivity.class);
+        startActivity(intent);
     }
 
     public void addAudio(View view) {

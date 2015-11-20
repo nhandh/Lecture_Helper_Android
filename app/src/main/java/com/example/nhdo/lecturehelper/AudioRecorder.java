@@ -135,7 +135,7 @@ public class AudioRecorder extends AppCompatActivity implements MediaPlayer.OnCo
                 stopPlayButton.setEnabled(false);
                 saveButton.setEnabled(false);
 
-                if (LectureHelperUtils.copyToStorage(new File(outputFile), "Iupui_Android",THREE_GPP)) {
+                if (LectureHelperUtils.copyToStorage(new File(outputFile), MainActivity.current_course_name,THREE_GPP)) {
                     Toast.makeText(getApplicationContext(), "Audio has been saved", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(getApplicationContext(), "Audio has not been saved", Toast.LENGTH_SHORT).show();
