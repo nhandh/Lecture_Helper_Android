@@ -2,6 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.nhdo.lecturehelper" >
 
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+          /*app requires camera to use */
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -31,6 +38,22 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ScheduleActivity" />
+        </activity>
+        <activity
+            android:name=".AudioRecorder"
+            android:label="@string/title_activity_audio_recorder"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.nhdo.lecturehelper.MainActivity" />
+        </activity>
+        <activity
+            android:name=".AddNoteActivity"
+            android:label="@string/title_activity_add_note"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.nhdo.lecturehelper.MainActivity" />
         </activity>
     </application>
 

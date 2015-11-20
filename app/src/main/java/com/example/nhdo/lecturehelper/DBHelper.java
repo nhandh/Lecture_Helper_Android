@@ -30,16 +30,6 @@ public class DBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String temp =  "create table " + COURSES_TABLE_NAME + "( " +
-                COURSES_COLUMN_ID + " integer primary key, " +
-                COURSES_COLUMN_NAME + " text, " +
-                COURSES_COLUMN_START_HOUR + " integer, " +
-                COURSES_COLUMN_START_MINUTE + " integer, " +
-                COURSES_COLUMN_END_HOUR + " integer, " +
-                COURSES_COLUMN_END_MINUTE + " integer, " +
-                COURSES_COLUMN_DAY_OF_WEEKS + " text, " +
-
-                ")";
 
         db.execSQL(
                 "create table " + COURSES_TABLE_NAME + "( " +

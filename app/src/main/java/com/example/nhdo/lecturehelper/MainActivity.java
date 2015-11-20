@@ -50,8 +50,13 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-    public void addText(View view) {
+    public void addNote(View view) {
         Log.d("MainActivity", " add text selected!");
+    }
+
+    public void addAudio(View view) {
+        Intent intent = new Intent(this, AudioRecorder.class);
+        startActivity(intent);
     }
 
     public void goToScheduleActivity(View view){

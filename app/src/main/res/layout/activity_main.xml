@@ -11,17 +11,25 @@
         android:layout_height="wrap_content" />
 
     <TextView android:id="@+id/main_tv_current_course"
-        android:text="ECE 595"
+        android:text="ERROR"
         android:layout_marginTop="25dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
-    <Button android:id="@+id/main_btn_addText"
+    <Button android:id="@+id/main_btn_addAudio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
-        android:text="Add Text"
-        android:onClick="addText"
+        android:text="Audio"
+        android:onClick="addAudio"
+        />
+
+    <Button android:id="@+id/main_btn_addNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Add Note"
+        android:onClick="addNote"
         />
 
     <Button android:id="@+id/main_btn_schedule"
